@@ -30,3 +30,7 @@ Git的版本库里存了很多东西，其中最重要的就是称为stage（或
 
 我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。
 你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。
+
+$ git checkout -- <fileName>		将当前暂存区的文件覆盖到工作区
+$ git reset HEAD <fileName>			将版本库的文件覆盖到暂存区
+$ git rm <fileName>					命令git rm用于删除一个文件。
