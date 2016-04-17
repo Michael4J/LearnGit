@@ -6,4 +6,4 @@ git status
 git log --pretty=oneline
 git reset --hard HEAD^
 git reflog
-git reset --hard 
+git reset --hard ccd9ae6
