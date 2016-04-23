@@ -34,6 +34,12 @@ $ git reset HEAD <fileName>			将版本库的文件覆盖到暂存区
 $ git rm <fileName>				命令git rm用于删除一个文件。
 
 远程仓库Repository
-$ git remote add origin git@github.com:Michael4J/LearnGit.git        关联远程仓库
+1.本地到远程
+$ git remote add origin git@github.com:Michael4J/LearnGit.git		关联远程仓库
 $ git push -u origin master			第一次推送master分支的所有内容（我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。）
 $ git push origin master			此后推送更新。
+2.远程到本地
+$ git clone git@github.com:Michael4J/Hello-World.git			克隆远程仓库
+$ git clone https://github.com/Michael4J/Hello-World.git		Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。
+
+
