@@ -22,10 +22,8 @@ $ git reset --hard HEAD^			回退到上一个版本
 $ git reflog					git reflog用来记录你的每一次命令
 $ git reset --hard ccd9ae6			回退到commit_id 为ccd9ae6的版本
 
-工作区（Working Directory）
-就是你在电脑里能看到的目录，比如我的Test文件夹就是一个工作区
-版本库（Repository）
-工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。
+工作区（Working Directory）:就是你在电脑里能看到的目录，比如我的Test文件夹就是一个工作区
+版本库（Repository）:工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。
 Git的版本库里存了很多东西，其中最重要的就是称为stage（或者叫index）的暂存区，还有Git为我们自动创建的第一个分支master，以及指向master的一个指针叫HEAD。
 
 我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。
@@ -34,3 +32,8 @@ Git的版本库里存了很多东西，其中最重要的就是称为stage（或
 $ git checkout -- <fileName>			将当前暂存区的文件覆盖到工作区
 $ git reset HEAD <fileName>			将版本库的文件覆盖到暂存区
 $ git rm <fileName>				命令git rm用于删除一个文件。
+
+远程仓库Repository
+$ git remote add origin git@github.com:Michael4J/LearnGit.git        关联远程仓库
+$ git push -u origin master			第一次推送master分支的所有内容（我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。）
+$ git push origin master			此后推送更新。
