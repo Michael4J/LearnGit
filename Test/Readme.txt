@@ -42,4 +42,10 @@ $ git push origin master			此后推送更新。
 $ git clone git@github.com:Michael4J/Hello-World.git			克隆远程仓库
 $ git clone https://github.com/Michael4J/Hello-World.git		Git支持多种协议，包括https，但通过ssh支持的原生git协议速度最快。
 
+分支管理
+$ git checkout -b dev				创建dev分支，然后切换到dev分支
+git checkout命令加上-b参数表示创建并切换，相当于以下两条命令：
+$ git branch dev
+$ git checkout dev
+$ git branch					git branch命令会列出所有分支，当前分支前面会标一个*号
 
