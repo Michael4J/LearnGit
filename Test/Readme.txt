@@ -50,3 +50,7 @@ $ git checkout dev				切换到dev分支
 
 $ git branch					git branch命令会列出所有分支，当前分支前面会标一个*号
 
+$ git checkout master
+$ git merge dev					git merge命令用于合并指定分支到当前分支。（dev-->master）
+$ git branch -d dev				删除dev分支
+
