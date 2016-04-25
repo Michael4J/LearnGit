@@ -54,3 +54,14 @@ $ git checkout master
 $ git merge dev					git merge命令用于合并指定分支到当前分支。（dev-->master）
 $ git branch -d dev				删除dev分支
 
+Bug分支
+软件开发中，bug就像家常便饭一样。有了bug就需要修复，在Git中，由于分支是如此的强大，所以，每个bug都可以通过一个新的临时分支来修复，修复后，合并分支，然后将临时分支删除。
+当你接到一个修复一个代号101的bug的任务时，很自然地，你想创建一个分支issue-101来修复它，但是，等等，当前正在dev上进行的工作还没有提交。
+并不是你不想提交，而是工作只进行到一半，还没法提交，预计完成还需1天时间。但是，必须在两个小时内修复该bug，怎么办？
+幸好，Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作。
+$ git stash					将工作现场储藏起来，查看工作区，就是干净的。
+修改完bug后又回来继续工作：
+$ git stash list				git stash list查看储藏的工作现场
+现在恢复工作现场：
+$ git stash pop					恢复的同时把stash内容也删了
+	还有一种方法：先$ git stash apply恢复，stash内容并不删除，需要用$ git stash drop来删除。
